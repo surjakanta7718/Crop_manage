@@ -1,0 +1,413 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Auth Container */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.auth-box {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 28px;
+}
+
+.auth-box p {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+
+.auth-box a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-box a:hover {
+  text-decoration: underline;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form button {
+  padding: 12px;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.form button:hover {
+  background-color: #5568d3;
+}
+
+.form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.navbar {
+  background-color: #667eea;
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logout-btn {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #ee5a5a;
+}
+
+.tabs {
+  display: flex;
+  background-color: white;
+  border-bottom: 2px solid #ddd;
+  padding: 0 30px;
+  gap: 10px;
+}
+
+.tabs button {
+  padding: 15px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+}
+
+.tabs button.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+.tabs button:hover {
+  color: #667eea;
+}
+
+.tab-content {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tab-content h3 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 22px;
+}
+
+/* Table Styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.table thead {
+  background-color: #f8f8f8;
+  border-bottom: 2px solid #ddd;
+}
+
+.table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+}
+
+.table td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Card Styles */
+.requirement-card,
+.offer-card,
+.inspection-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #667eea;
+}
+
+.requirement-card p,
+.offer-card p,
+.inspection-card p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.requirement-card strong,
+.offer-card strong,
+.inspection-card strong {
+  color: #333;
+}
+
+.requirements-list,
+.offers-list,
+.inspections-list {
+  display: grid;
+  gap: 20px;
+}
+
+/* Button Styles */
+button {
+  font-family: inherit;
+}
+
+.action-btn {
+  background-color: #51cf66;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.action-btn:hover {
+  background-color: #40c057;
+}
+
+.delete-btn {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.delete-btn:hover {
+  background-color: #ee5a5a;
+}
+
+/* Messages */
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border-left: 5px solid #f5c6cb;
+}
+
+.warning {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border-left: 5px solid #ffeeba;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  padding: 40px 30px;
+  background-color: white;
+  margin: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-content h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.dashboard-content p {
+  margin-bottom: 10px;
+  color: #666;
+  font-size: 16px;
+}
+
+.dashboard-options {
+  margin-top: 30px;
+}
+
+.dashboard-options button {
+  background-color: #667eea;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.dashboard-options button:hover {
+  background-color: #5568d3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar h1 {
+    font-size: 18px;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+    padding: 0 15px;
+  }
+
+  .tab-content {
+    padding: 15px;
+  }
+
+  .auth-box {
+    padding: 25px;
+  }
+
+  .table {
+    font-size: 14px;
+  }
+
+  .table th,
+  .table td {
+    padding: 10px;
+  }
+
+  .requirement-card,
+  .offer-card,
+  .inspection-card {
+    padding: 15px;
+  }
+}
+
+/* Loading and Empty States */
+.tab-content p {
+  text-align: center;
+  color: #999;
+  padding: 30px;
+  font-style: italic;
+}
+
+/* Input focus styles */
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Link styles */
+a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

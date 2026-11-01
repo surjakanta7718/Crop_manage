@@ -17,7 +17,15 @@ const app = express();
 connectDB();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5050',
+    'http://localhost:5173',
+    'http://localhost:5174'
+  ],
+  methods: ['GET','POST','PUT','DELETE'],
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes
@@ -34,7 +42,7 @@ app.get("/", (req, res) => {
 // Initialize admin on startup
 initializeAdmin();
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5050;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

@@ -95,6 +95,19 @@ AgroConnect/
 
 ## Installation & Setup
 
+### Run the full application with Docker
+
+1. Copy `.env.example` to `.env` in the project root and set a strong `JWT_SECRET`, `ADMIN_EMAIL`, and `ADMIN_PASSWORD`.
+2. From the project root, build and start the services:
+
+```bash
+docker compose up --build
+```
+
+3. Open the application at `http://localhost:8080`. The API is also available at `http://localhost:5050`.
+
+Docker Compose starts the frontend, backend, and MongoDB. MongoDB data is kept in the `mongo_data` volume across restarts. To stop the services, run `docker compose down`; to also delete the stored database, run `docker compose down --volumes`.
+
 ### Prerequisites
 - Node.js (v14 or higher)
 - MongoDB (running locally on port 27017 or update MongoDB URI in .env)
